@@ -1,0 +1,363 @@
+/* ===== LOADING SPINNER WRAPPER ===== */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===== MAIN PAGE CARD ===== */
+.meal-details-card {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: clamp(12px, 3vw, 20px);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  font-family: Arial;
+}
+
+@media (max-width: 768px) {
+  .meal-details-card {
+    width: 95%;
+    margin: 15px auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meal-details-card {
+    width: 98%;
+    margin: 10px auto;
+    padding: 8px;
+    border-radius: 6px;
+  }
+}
+
+/* ===== TOP SECTION ===== */
+.meal-details-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 1px solid #eecece;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .meal-details-content {
+    flex-direction: column;
+    padding: 5px;
+  }
+}
+
+/* ===== MEAL PHOTO ===== */
+.meal-details-content img {
+  width: 50%;
+  height: auto;
+  min-height: 300px;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .meal-details-content img {
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+  }
+}
+
+/* ===== RIGHT SIDE INFO BLOCK ===== */
+.right-content {
+  width: 60%;
+  margin: clamp(20px, 3vw, 40px);
+  margin-bottom: 190px;
+}
+
+@media (max-width: 768px) {
+  .right-content {
+    width: 100%;
+    margin: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+/* ===== PREP TIME ROW ===== */
+.prep-serve {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+@media (max-width: 480px) {
+  .prep-serve {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.prep-text {
+  color: gray;
+  font-size: clamp(11px, 1.5vw, 14px);
+  margin-top: 0;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.prep-icon {
+  display: flex;
+  align-items: center;
+}
+
+/* ===== SECTION HEADINGS ===== */
+.ingredients-header,
+.instruction-header {
+  font-weight: bold;
+}
+
+/* ===== MEAL TITLE ===== */
+.right-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .right-content h2 {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+  }
+}
+
+/* ===== BADGE TAGS ===== */
+.tag {
+  padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 10px);
+  border-radius: 15px;
+  font-size: clamp(10px, 1vw, 12px);
+  margin-right: 10px;
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .tag {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.veg {
+  background-color: #fce8d5;
+  color: #d9822b;
+}
+
+.region {
+  background-color: #dce7f7;
+  color: #3b6cb7;
+}
+
+/* ===== FAVORITE BUTTON ===== */
+.favorite-btn-detail {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: clamp(18px, 2vw, 24px);
+  margin-left: 10px;
+  padding: 5px;
+}
+
+@media (max-width: 480px) {
+  .favorite-btn-detail {
+    margin-left: 5px;
+  }
+}
+
+.heart-icon {
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.heart-icon.filled {
+  color: red;
+}
+
+/* ===== VIDEO BUTTON ===== */
+.video-btn {
+  margin-top: 15px;
+  padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 25px);
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: clamp(12px, 1.5vw, 16px);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .video-btn {
+    width: 100%;
+  }
+}
+
+/* ===== BOTTOM SECTION ===== */
+.extra-details {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* ===== INGREDIENTS BOX ===== */
+.ingredients {
+  width: 30%;
+  border: 1px solid #eecece;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  min-width: 250px;
+}
+
+@media (max-width: 1024px) {
+  .ingredients {
+    width: 40%;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ingredients {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+.ingredients ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.measure {
+  color: orange;
+}
+
+/* ===== INSTRUCTIONS BOX ===== */
+.instructions {
+  width: 70%;
+  border: 1px solid #eecece;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  min-width: 250px;
+}
+
+@media (max-width: 1024px) {
+  .instructions {
+    width: 60%;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .instructions {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+.instructions p {
+  background-color: #f5f5f5;
+  padding: clamp(10px, 2vw, 15px);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: clamp(12px, 1.2vw, 14px);
+}
+
+@media (max-width: 768px) {
+  .extra-details {
+    flex-direction: column;
+  }
+
+  .ingredients,
+  .instructions {
+    width: 100%;
+  }
+}
+
+/* ===== INDIVIDUAL INGREDIENT ITEM ===== */
+.ingredient-item {
+  margin: clamp(5px, 1vw, 10px);
+  padding: clamp(6px, 1vw, 8px);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 14px);
+}
+
+/* ===== INDIVIDUAL INSTRUCTION PARAGRAPH ===== */
+.instruction-para {
+  margin: clamp(5px, 1vw, 10px);
+  padding: clamp(6px, 1vw, 8px);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(12px, 1vw, 14px);
+}
+
+/* ===== LEFT ARROW ICON ===== */
+.left-arrow {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2vw, 16px);
+  margin-right: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===== BACK TO RESULTS BUTTON ===== */
+.back-to-results {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #de7e1e;
+  display: flex;
+  align-items: center;
+  margin: clamp(15px, 3vw, 30px);
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 200;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+@media (max-width: 480px) {
+  .back-to-results {
+    margin: 15px;
+  }
+}
+
+.source-link {
+  color: antiquewhite;
+  background-color: #d9822b;
+  padding: clamp(8px, 1.5vw, 15px) clamp(12px, 2vw, 20px);
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: clamp(12px, 1.5vw, 14px);
+  transition: 0.3s;
+}
+
+.source-link:hover {
+  background-color: #c27520;
+}
+
+.source-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
